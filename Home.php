@@ -14,6 +14,7 @@
 			<p>My page</p>
 		</div>
 		<div>
+			<p>Text</p>
 			<?php 
 			 ?>
 		</div>
