@@ -9,6 +9,7 @@ $user = $result->fetch_assoc();
 if (count($user)==0) {
 	echo "Invalid login or password";
 	exit();}
+setcookie('users', $user['login'], time()+180, "/");
 $mysql->close();
 header('Location: Home.php');
 ?>
