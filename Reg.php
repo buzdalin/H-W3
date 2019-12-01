@@ -18,6 +18,7 @@ if (strlen($pass)>=8) {
 else {echo "Invalid password <br>";exit();};
 if ($pass!==$pass2) {echo "Incorect second password <br>";exit();}
 else	{
+$pass=password_hash($pass, PASSWORD_DEFAULT);
 $mysql = new mysqli('localhost', 'root','', 'auth');
 $mysql->query("INSERT INTO `users` (`login`, `email`, `pass`)VALUES ('$login', '$email', '$pass');");
 $mysql->close();};
