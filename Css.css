@@ -1,7 +1,7 @@
 *{box-sizing: border-box;
 	margin: 0px auto 0px;
 	max-width: 1720px;}
-	body {background-color: lightgray;}
+body {background-color: lightgray;}
 
 	.main {text-align: center;}
 	.header {background-color: #009999;
@@ -32,3 +32,5 @@
 		width: 25%;
 		margin: auto;
 		text-align: center;}
+input[type=email]{}
+table, td, tr, th{border: solid black 2px;}
