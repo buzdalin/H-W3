@@ -1,1 +1,74 @@
-//Запросы
+//Таблица юзеров в БД auth
+CREATE TABLE `auth`.`users` ( `id` INT(4) UNSIGNED NOT NULL AUTO_INCREMENT , `login` VARCHAR(50) NOT NULL , `email` VARCHAR(50) NOT NULL , `pass` VARCHAR(255) NOT NULL , `sudo` VARCHAR(4) NOT NULL DEFAULT 'user' , UNIQUE `id` (`id`), UNIQUE `login` (`login`)) ENGINE = MyISAM CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
+//Таблица юзеров и складов
+CREATE TABLE `auth`.`list` ( `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT , `login` VARCHAR(50) NOT NULL , `code` VARCHAR(20) NOT NULL , `place` VARCHAR(20) NOT NULL , `size` VARCHAR(150) NOT NULL DEFAULT 'user' , `secure` VARCHAR(3) NOT NULL DEFAULT 'off' , `comment` VARCHAR(200) NULL DEFAULT NULL , UNIQUE `id` (`id`), UNIQUE `login` (`login`), UNIQUE `pass` (`code`)) ENGINE = MyISAM CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
+//Главный админ
+INSERT INTO `users`(`id`, `login`, `email`, `pass`, `sudo`) VALUES ('0','Sudo','sudo@sudo.com','$2y$10$Gc7VZh28g0bwyPpgJadsmuEwIg3OuliWl81tycP4j9wo6WssRrAtq','sudo')
+//Таблица склада
+CREATE TABLE `auth`.`$code` ( `id` INT(5) NOT NULL AUTO_INCREMENT , `name` VARCHAR(100) NOT NULL , `size` VARCHAR(20) NOT NULL , `mass` VARCHAR(10) NOT NULL , `num` VARCHAR(10) NULL DEFAULT NULL , UNIQUE `id` (`id`)) ENGINE = MyISAM CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
+//Запрос
+$mysql = new mysqli('localhost', 'root','', 'auth');
+
+INSERT INTO `$code`(`name`, `size`, `mass`, `num`) VALUES ('$name','$size','$mass','$num');
+
+SELECT `code` FROM `list`
+
+INSERT INTO `list` (`login`, `code`, `place`, `size`, `secure`, `comment`) VALUES ('$cookie', '$code', '$place', '$size', '$secu', '$comm')
+
+SELECT `code` FROM `list` WHERE `login`='$login'
+
+DELETE FROM `list` WHERE `login`='$login'
+
+DELETE FROM `users` WHERE `login`='$login'
+
+DELETE FROM `$code` WHERE `id`='$id'
+
+DELETE FROM `list` WHERE `code`='$code'
+
+DROP TABLE `auth`.`$code`
+
+SELECT `place`, `size`, `secure`, `comment`, `code` FROM `list` WHERE `login`='$login'
+
+SELECT `pass` FROM `users` WHERE `login`='$log'
+
+SELECT `login` FROM `users` WHERE `login`='$login'
+
+UPDATE `users` SET `login`='$login', `email`='$email', `pass`='$pass' WHERE `login`='$log'
+
+UPDATE `list` SET `login`='$login' WHERE `login`='$log'
+
+INSERT INTO `$code`(`name`, `size`, `mass`, `num`) VALUES ('$name','$size','$mass','$num')
+
+SELECT * FROM `$code` WHERE `id`='$id'
+
+UPDATE `$code` SET `name`='$name', `size`='$size', `mass`='$mass', `num`='$num' WHERE `id`='$id'
+
+SELECT * FROM `users` WHERE `login`='$login'
+
+SELECT * FROM `$code` 
+
+SELECT * FROM `users` WHERE `login`!='sudo'
+
+SELECT * FROM `$code`
+
+SELECT * FROM `list`
+
+SELECT `login` FROM `users` WHERE `id`='$id'
+
+SELECT `code` FROM `list` WHERE `login`='$login'
+
+DROP TABLE `auth`.`$code`
+
+DELETE FROM `users` WHERE `id`='$id'
+
+DELETE FROM `list` WHERE `login`='$login'
+
+UPDATE `users` SET `sudo`='sudo' WHERE `id`='$id'
+
+UPDATE `users` SET `sudo`='user' WHERE `id`='$id'
+
+SELECT `login`, `pass`, `sudo` FROM `users` WHERE `login`='$login'
+
+SELECT `login` FROM `users` WHERE `login`='$login'
+
+INSERT INTO `users` (`login`, `email`, `pass`)VALUES ('$login', '$email', '$pass')
