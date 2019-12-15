@@ -15,8 +15,8 @@ if (!(password_verify($pass, $user['pass']))) {
 	exit();
 }
 
-setcookie('users', $user['sudo'], time()+180, "/");
-setcookie('login', $user['login'], time()+180, "/");
+setcookie('users', $user['sudo'], time()+60*60*2, "/");
+setcookie('login', $user['login'], time()+60*60*2, "/");
 $mysql->close();
-header('Location: Home.php')
+header('Location: \Dz\Site\UniScripts\Home.php')
 ?>
