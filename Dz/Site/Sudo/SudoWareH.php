@@ -53,10 +53,6 @@ while ($db=$result->fetch_assoc()) {
 
 echo "</table>";
 echo "<p>Total: ".$all."</p>";
-
-
-
-
 ?>
 <a href="Sudowarehouses.php">Back</a>
 	</div></div>
