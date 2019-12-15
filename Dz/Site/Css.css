@@ -1,8 +1,8 @@
 *{box-sizing: border-box;
 	margin: 0px auto 0px;
-	max-width: 1720px;}
+	max-width: 1720px;
+font-size: 105% ;}
 body {background-color: lightgray;}
-
 	.main {text-align: center;}
 	.header {background-color: #009999;
 			width: 100%;
@@ -32,5 +32,14 @@ body {background-color: lightgray;}
 		width: 25%;
 		margin: auto;
 		text-align: center;}
+	.new{background-color: white;}
+
+	select{font-size:100%;}
+
+    .WH {color:black;}
+    a{
+    	color:black;
+    	}
 input[type=email]{}
 table, td, tr, th{border: solid black 2px;}
+ table {border-collapse: collapse;}
