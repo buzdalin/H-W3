@@ -1,6 +1,6 @@
 <?php
 if (empty($_COOKIE['login'])) {
-	header("location: Auth.html");
+	header("location: \Dz\Site\Uni\Auth.html");
 	exit();};
 $login=$_COOKIE['login'];
 	$id=0;
@@ -9,8 +9,8 @@ $login=$_COOKIE['login'];
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="Css.css">
+	<title>My warehouse</title>
+	<link rel="stylesheet" type="text/css" href="\Dz\Site\Css.css">
 	<meta charset="utf-8">
 </head>
 <body>
@@ -21,13 +21,12 @@ $login=$_COOKIE['login'];
 <div class="main">
 	<div class="content"><div class="menu">
 		<p style="background-color:#FF9640; color: #A64B00" >Navigation</p>
-		<a href="Home.php">Home</a><br>
-		<a href="Mywarehouses.php">My warehouses</a><br>
-		<a href="Create.html">New</a><br>
-		<a href="Acount.php">Acount</a><br>
-		<a href="logout.php">Exit</a><br>
-	</div>
-		<h1 style="text-align: center;">Контент</h1>
+		<a href="\Dz\Site\UniScripts\Home.php">Home</a><br>
+		<a href="\Dz\Site\User\Mywarehouses.php">My warehouses</a><br>
+		<a href="\Dz\Site\User\Create.html">New</a><br>
+		<a href="\Dz\Site\User\Acount.php">Acount</a><br>
+		<a href="/Dz/site/UniScripts/logout.php">Exit</a><br>
+	</div>		<h1 style="text-align: center;">My warehouses</h1>
 	
 	<table border="5">
 		<tr>
@@ -35,6 +34,7 @@ $login=$_COOKIE['login'];
 			<th>Size</th>
 			<th>Secure</th>
 			<th>Comment</th>
+			<th colspan="2">Manage</th>
 		</tr>
 <?php
 $mysql = new mysqli('localhost', 'root','', 'auth');
@@ -57,7 +57,8 @@ echo "<p>Total: ".$all."</p>";
 ?>
 	</div></div>
 <div class="footer">
-		<h1>Футер</h1>
+		<p>Выполнено студентом МГТУ им. Н.Э. Баумана</p>
+			<p>ИУ4-11Б</p>
 </div>
 </body>
 </html>
