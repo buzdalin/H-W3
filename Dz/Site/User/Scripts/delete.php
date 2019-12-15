@@ -10,7 +10,6 @@ if($result)
 	$all = mysqli_num_rows($result); // количество полученных строк
 	for ($i = 1 ; $i <= $all ; $i++)
 	{$zn = mysqli_fetch_row($result);
-	
 			$delete=$mysql->query("DROP TABLE `auth`.`$zn[0]`");
 		;};};
 $delete=$mysql->query("DELETE FROM `list` WHERE `login`='$login'");
