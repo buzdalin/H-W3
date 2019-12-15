@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Creating new warehouse</title>
+	<link rel="stylesheet" type="text/css" href="\Dz\Site\Css.css">
+	<meta charset="utf-8">
+</head>
+<body>
+
+<div class="header">
+		<h1>New warehouse</h1>
+</div>
+<div class="main">
+	<div class="content"><div class="menu">
+		<p style="background-color:#FF9640; color: #A64B00" >Navigation</p>
+		<a href="\Dz\Site\UniScripts\Home.php">Home</a><br>
+		<a href="\Dz\Site\User\Mywarehouses.php">My warehouses</a><br>
+		<a href="\Dz\Site\User\Create.html">New</a><br>
+		<a href="\Dz\Site\User\Acount.php">Acount</a><br>
+		<a href="/Dz/site/UniScripts/logout.php">Exit</a><br>
+	</div>
+		<h1 style="text-align: center;">New warehouse</h1>
+	<div>
+		<form action="\Dz\Site\User\Scripts\create.php" method="POST">
+	Place: <select name="place">
+		<option disabled="" selected>Country</option>
+		<option value="RU">Russia</option>
+		<option value="USA">USA</option>
+		<option value="UK">UK</option>
+	</select><br>
+	Size: <input type="radio" name="size" value="5x5x5" >Small
+			<input type="radio" name="size" value="10x10x10">Medium
+			<input type="radio" name="size" value="20x20x20">Large<br>
+			<input type="text" name="sizeu" placeholder="Uniqe size MxMxM"><br>
+	Secure: <input type="checkbox" name="secure"><br>
+	<input type="text" name="comm" placeholder="Name"><br>
+	<input type="submit" name="submit">
+</form></div>
+	</div></div>
+<div class="footer">
+<p>Выполнено студентом МГТУ им. Н.Э. Баумана</p>
+			<p>ИУ4-11Б</p></div>
+
+</body>
+</html>
